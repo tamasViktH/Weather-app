@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s066ikr",
+  "description": "https://scrimba.com/frontend-path-c0j/~0os/s0speiobo8/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
