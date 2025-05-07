@@ -1,19 +1,8 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+Tenzies is a fast-paced, casual dice game I built as part of Scrimba’s Frontend Developer Career Path. The objective is to roll ten dice until all show the same number,
+with the added challenge of selectively "freezing" certain dice to hold their values between rolls. The app delivers a visually engaging and responsive experience with celebratory confetti effects on victory.
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+This project was developed using React and showcases core concepts such as component composition, state management with hooks, conditional rendering, and keyboard accessibility using `useRef`. 
+Each die is rendered as a dynamic, reusable component that tracks its held state and updates accordingly, giving users immediate feedback with color changes and updated button states.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
+Through Tenzies, I practiced working with React's `useState` and `useEffect` hooks, implemented unique identifiers via `nanoid`, and managed game logic cleanly within a functional component structure. 
+It sharpened my understanding of user interaction handling, game logic flow, and responsive styling using custom CSS and semantic HTML. This project gave me confidence in creating complete, polished mini-apps from scratch.
