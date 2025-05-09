@@ -1,8 +1,47 @@
-Tenzies is a fast-paced, casual dice game I built as part of Scrimba’s Frontend Developer Career Path. The objective is to roll ten dice until all show the same number,
-with the added challenge of selectively "freezing" certain dice to hold their values between rolls. The app delivers a visually engaging and responsive experience with celebratory confetti effects on victory.
+# 🌤️ Weather app-Personal Dashboard – Real-Time Browser Homepage
 
-This project was developed using React and showcases core concepts such as component composition, state management with hooks, conditional rendering, and keyboard accessibility using `useRef`. 
-Each die is rendered as a dynamic, reusable component that tracks its held state and updates accordingly, giving users immediate feedback with color changes and updated button states.
+The **Weather app-Personal Dashboard** is a minimalist, real-time homepage that combines useful daily information like current time, weather conditions, and live cryptocurrency prices — all displayed over a rotating dynamic background. Built as part of the [Scrimba Frontend Developer Career Path](https://scrimba.com/learn/frontend), this project focuses on working with multiple APIs, asynchronous JavaScript, and creating a user-centered layout.
 
-Through Tenzies, I practiced working with React's `useState` and `useEffect` hooks, implemented unique identifiers via `nanoid`, and managed game logic cleanly within a functional component structure. 
-It sharpened my understanding of user interaction handling, game logic flow, and responsive styling using custom CSS and semantic HTML. This project gave me confidence in creating complete, polished mini-apps from scratch.
+---
+
+## 🛠️ Tech Stack
+
+- HTML5 & CSS3
+- Vanilla JavaScript (ES6+)
+- Unsplash API – for background images
+- CoinGecko API – for live crypto prices (e.g., Dogecoin)
+- OpenWeatherMap API – for geolocation-based weather
+
+---
+
+## 🚀 Live Demo
+
+🔗 [View on Netlify](https://your-netlify-link.netlify.app)  
+📦 [GitHub Repository](https://github.com/yourusername/personal-dashboard)
+
+> *(Replace these with your actual links)*
+
+---
+
+## 📚 What I Learned
+
+- Fetching and handling data from multiple APIs
+- Writing asynchronous code using `async/await` and `try/catch`
+- Managing dynamic content with JavaScript and DOM updates
+- Designing a clean, real-time UI that balances visuals and usability
+
+---
+
+## 🎨 Features
+
+- ⏰ Live digital clock
+- 🌤️ Real-time weather info using geolocation
+- 💰 Cryptocurrency price tracker (Dogecoin)
+- 🖼️ Rotating Unsplash backgrounds
+- 📱 Responsive design for desktops and tablets
+
+---
+
+## 📦 Folder Overview
+
+
