@@ -39,4 +39,5 @@ The **Weather app-Personal Dashboard** is a minimalist, real-time homepage that 
 - Managing dynamic content with JavaScript and DOM updates
 - Designing a clean, real-time UI that balances visuals and usability
 
+---
   
