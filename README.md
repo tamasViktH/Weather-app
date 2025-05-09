@@ -17,18 +17,8 @@ The **Weather app-Personal Dashboard** is a minimalist, real-time homepage that 
 ## 🚀 Live Demo
 
 🔗 [View on Netlify](https://your-netlify-link.netlify.app)  
-📦 [GitHub Repository](https://github.com/yourusername/personal-dashboard)
 
-> *(Replace these with your actual links)*
 
----
-
-## 📚 What I Learned
-
-- Fetching and handling data from multiple APIs
-- Writing asynchronous code using `async/await` and `try/catch`
-- Managing dynamic content with JavaScript and DOM updates
-- Designing a clean, real-time UI that balances visuals and usability
 
 ---
 
@@ -42,6 +32,11 @@ The **Weather app-Personal Dashboard** is a minimalist, real-time homepage that 
 
 ---
 
-## 📦 Folder Overview
+## 📚 What I Learned
 
+- Fetching and handling data from multiple APIs
+- Writing asynchronous code using `async/await` and `try/catch`
+- Managing dynamic content with JavaScript and DOM updates
+- Designing a clean, real-time UI that balances visuals and usability
 
+  
