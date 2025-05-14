@@ -16,7 +16,8 @@ The **Weather app-Personal Dashboard** is a minimalist, real-time homepage that 
 
 ## 🚀 Live Demo
 
-🔗 [View on Netlify](https://your-netlify-link.netlify.app)  
+🔗 [View on Netlify](https://personal-dashboard-hazos.netlify.app/)
+
 
 
 
