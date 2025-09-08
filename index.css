@@ -1,6 +1,6 @@
-/* =========================
+/* 
    Variables & Base
-   ========================= */
+    */
 * { box-sizing: border-box; }
 
 :root {
@@ -23,9 +23,9 @@ body {
   text-shadow: 0 0 18px rgba(0, 0, 0, .45);
 }
 
-/* =========================
+/* 
    Layout
-   ========================= */
+    */
 .app {
   min-height: 100vh;
   display: grid;
@@ -54,13 +54,10 @@ body {
   text-align: center;
   min-width: 160px;
 }
-.btn{
-  fon
-}
 
-/* =========================
+/* 
    Cards & Utilities
-   ========================= */
+    */
 .card,
 #city-input {
   background: var(--glass);
@@ -77,9 +74,9 @@ body {
   gap: 6px;
 }
 
-/* =========================
+/* 
    Weather Block
-   ========================= */
+    */
 .w-main {
   display: flex;
   align-items: center;
@@ -106,13 +103,14 @@ body {
   border-radius: 12px;
 }
 
-/* =========================
+/* 
    Form & Buttons
-   ========================= */
+    */
 #loc-form { display: flex; gap: 8px; }
 
 #city-input,
-.btn {
+.btn,
+.bg-credit-container {
   border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 10px;
   color: var(--text);
@@ -134,7 +132,7 @@ body {
 button { font-family: inherit; }
 
 .btn:hover { background: rgba(255, 255, 255, .22); }
-.btn.subtle { background: transparent; }
+
 
 /* Unit toggle state */
 .unit[aria-pressed="true"] {
@@ -144,15 +142,15 @@ button { font-family: inherit; }
   font-weight: 700;
 }
 
-/* =========================
+/* 
    Time / Date
-   ========================= */
+    */
 .time { font-size: clamp(2.4rem, 7vw, 4.8rem); margin: 0; }
-.date { margin: 0; color: inherit;text-shadow:#00263c;  }
+.date { margin: 0; color: inherit; text-shadow:#00263c;  }
 
-/* =========================
+/* 
    Errors
-   ========================= */
+    */
 .error {
   margin-top: 12px;
   padding: 10px 12px;
@@ -162,9 +160,9 @@ button { font-family: inherit; }
   color: var(--bad);
 }
 
-/* =========================
+/* 
    Skeleton Shimmer
-   ========================= */
+    */
 .skeleton { position: relative; overflow: hidden; }
 .skeleton::after {
   content: "";
@@ -177,10 +175,13 @@ button { font-family: inherit; }
 
 @keyframes shimmer { 100% { transform: translateX(100%); } }
 
-/* =========================
+/* 
    Responsive
-   ========================= */
+   */
 @media (max-width: 720px) {
   .w-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #city-input { width: 100%; }
+}
+.bg-credit-container{
+  padding: 2px 5px;
 }
