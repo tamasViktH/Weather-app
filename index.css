@@ -114,6 +114,7 @@ body {
   border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 10px;
   color: var(--text);
+  backdrop-filter: blur(6px);
 }
 
 #city-input::placeholder {
@@ -184,4 +185,10 @@ button { font-family: inherit; }
 }
 .bg-credit-container{
   padding: 2px 5px;
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+  
+}
+#bg-credit {
+color: var(--text);
 }
