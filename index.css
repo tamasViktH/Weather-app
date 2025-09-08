@@ -1,79 +1,186 @@
-* {
-    box-sizing: border-box;
-}    
+/* =========================
+   Variables & Base
+   ========================= */
+* { box-sizing: border-box; }
+
+:root {
+  --glass: rgba(0, 0, 0, .35);
+  --text: #fff;
+  --muted: #cfd8e3;
+  --accent: #8bd0ff;
+  --bad: #ff8c8c;
+  --radius: 16px;
+  --shadow: 0 10px 28px rgba(0, 0, 0, .35);
+}
+
+html, body { height: 100%; }
 
 body {
-    margin: 0;
-    background: no-repeat center center fixed; 
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #242424;
+  margin: 0;
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: no-repeat center/cover fixed;
+  text-shadow: 0 0 18px rgba(0, 0, 0, .45);
 }
 
-main {
-    padding: 15px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* =========================
+   Layout
+   ========================= */
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+  padding: 16px;
 }
 
-div.top {
-    display: flex;
-    justify-content: space-between;
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-h1.time {
-    text-align: center;
-    font-size: 5rem;
+.footer { opacity: .9; }
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-div#crypto {
-    font-size: 1.3rem;
+.center {
+  text-align: center;
+  min-width: 160px;
+}
+.btn{
+  fon
 }
 
-div#crypto > p {
-    margin: 0;
+/* =========================
+   Cards & Utilities
+   ========================= */
+.card,
+#city-input {
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  font: inherit;
 }
 
-div#crypto-top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-div#crypto-top > span {
-    margin-left: 10px;
+/* =========================
+   Weather Block
+   ========================= */
+.w-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-div#weather {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-self: flex-start;
-    margin-top: -20px;
+.w-main img { width: 72px; }
+
+.w-temp { font-size: 2rem; margin: 0; }
+
+.muted { color: var(--muted); }
+
+.w-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
-div#weather > img {
-    width: 70px;
+.w-grid > div {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .18);
+  padding: 10px;
+  border-radius: 12px;
 }
 
-p.weather-city {
-    width: 100%;
-    text-align: right;
-    margin: 0;
-    margin-top: -10px;
-    font-size: 1.2rem;
+/* =========================
+   Form & Buttons
+   ========================= */
+#loc-form { display: flex; gap: 8px; }
+
+#city-input,
+.btn {
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 10px;
+  color: var(--text);
 }
 
-p.weather-temp {
-    margin: 0;
-    font-size: 1.7rem;
-    margin-left: -10px;
+#city-input::placeholder {
+  color: var(--text);
+  opacity: .85;
+  
 }
 
-p#author {
-    font-size: 1rem;
+.btn {
+  background: var(--glass);
+  padding: 10px 12px;
+  cursor: pointer;
+  font : inherit
+}
+
+button { font-family: inherit; }
+
+.btn:hover { background: rgba(255, 255, 255, .22); }
+.btn.subtle { background: transparent; }
+
+/* Unit toggle state */
+.unit[aria-pressed="true"] {
+  background: var(--accent);
+  color: #00263c;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* =========================
+   Time / Date
+   ========================= */
+.time { font-size: clamp(2.4rem, 7vw, 4.8rem); margin: 0; }
+.date { margin: 0; color: inherit;text-shadow:#00263c;  }
+
+/* =========================
+   Errors
+   ========================= */
+.error {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 0, 0, .35);
+  background: rgba(255, 0, 0, .12);
+  border-radius: 10px;
+  color: var(--bad);
+}
+
+/* =========================
+   Skeleton Shimmer
+   ========================= */
+.skeleton { position: relative; overflow: hidden; }
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .16), transparent);
+  animation: shimmer 1.3s infinite;
+}
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 720px) {
+  .w-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #city-input { width: 100%; }
 }

@@ -1,21 +1,55 @@
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="index.css">
-        <title>Personal Dashboard</title>
-    </head>
-    <body>
-        <main>    
-            <div class="top">
-                <div id="crypto">
-                    <div id="crypto-top"></div>
-                </div>
-                <div id="weather"></div>
-            </div>
-            
-            <h1 id="time" class="time"></h1>
-            <p id="author"></p>
-        </main>
-        <script src="index.js" type="module"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Weather / Dashboard</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="bar">
+        <div class="left">
+          <form id="loc-form" autocomplete="off" aria-label="Search city">
+            <input id="city-input" placeholder="Search city…" aria-label="City" />
+            <button id="search-btn" class="btn" type="submit">🔍</button>
+          </form>
+        </div>
+
+        <div class="center">
+          <h1 id="clock" class="time">--:--</h1>
+          <p id="today" class="date">—</p>
+        </div>
+
+        <div class="right" role="group" aria-label="Temperature units">
+          <button class="btn unit" id="c-btn" data-unit="metric" aria-pressed="false">°C</button>
+          <button class="btn unit" id="f-btn" data-unit="imperial" aria-pressed="false">°F</button>
+        </div>
+      </header>
+
+      <section id="weather" class="card" aria-live="polite">
+        <div id="w-main" class="w-main skeleton">
+          <img id="w-icon" alt="" />
+          <div class="stack">
+            <p id="w-temp" class="w-temp">—</p>
+            <p id="w-city" class="muted">—</p>
+          </div>
+        </div>
+
+        <div id="w-extras" class="w-grid skeleton">
+          <!-- populated by JS -->
+        </div>
+
+        <div id="w-error" class="error" hidden></div>
+      </section>
+
+      <footer class="bar footer">
+        <button id="bg-refresh" class="btn subtle" title="Refresh background">↻ Background</button>
+        <p id="bg-credit" class="muted" aria-live="polite"></p>
+      </footer>
+    </main>
+
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
